@@ -1,0 +1,191 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A more modern and readable font */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* A very light blue background for a pleasant feel */
+    color: #333; /* Dark text for readability */
+    line-height: 1.6; /* Improved line spacing for better readability */
+}
+
+header {
+    background-color: #003366; /* Dark blue header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+nav {
+    background-color: #336699; /* Slightly lighter blue for navigation */
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    display: inline-block; /* To allow padding and background on hover to work properly */
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+nav ul li a:hover {
+    background-color: #005580; /* Darker blue on hover */
+    color: #f0f8ff; /* Light text on hover for better contrast */
+}
+
+nav ul li a.active {
+    background-color: #005580; /* Highlight the active page */
+    color: white;
+}
+
+main {
+    padding: 20px;
+    margin: 20px auto; /* Center the main content */
+    max-width: 960px; /* Limit the width for better readability on larger screens */
+}
+
+main section {
+    background-color: white;
+    padding: 30px; /* Increased padding for more visual space */
+    margin-bottom: 30px;
+    border-radius: 12px; /* More rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* More pronounced shadow */
+}
+
+main section h2 {
+    color: #003366; /* Dark blue for section titles */
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #336699; /* Subtle line under the title */
+    padding-bottom: 10px;
+}
+
+main section p {
+    line-height: 1.7; /* Improved line height within paragraphs */
+    margin-bottom: 15px;
+    color: #555; /* Slightly lighter text for body content */
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow at the top of the footer */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav ul {
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        border-radius: 5px;
+    }
+}
+
+/* Contact Form Styling */
+#contactForm div {
+    margin-bottom: 15px;
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #003366;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+    width: calc(100% - 22px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px; /* Slightly larger font for inputs */
+}
+
+#contactForm textarea {
+    resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+#contactForm button[type="submit"] {
+    background-color: #003366;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm button[type="submit"]:hover {
+    background-color: #005580;
+}
+
+/* Image Styling */
+main section#multimedia div:first-child {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main section#multimedia img {
+    max-width: 100%;
+    height: auto;
+    border: 8px solid #336699;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Video Styling */
+main section#multimedia div:last-child {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+    margin-top: 20px;
+    border: 1px solid #ddd; /* Subtle border for the video container */
+    border-radius: 8px;
+}
+
+main section#multimedia iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove default iframe border */
+}

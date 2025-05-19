@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Webpage</title>
+    <link rel="stylesheet" href="design\style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Raj Webpage</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p> We're excited to showcase our skills in internet programming!</p>
+            <p>Learn more about us on our <a href="about.html" style="color: #336699; text-decoration: underline;">About Page</a>.</p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>Here you'll find information about the services we offer. Stay tuned for more details!</p>
+            <p>Explore our services in detail on our <a href="services.html" style="color: #336699; text-decoration: underline;">Services Page</a>.</p>
+        </section>
+       <section id="multimedia">
+    <h2>Multimedia Showcase</h2>
+    <div>
+        <img src="Images\UX.png" alt="Placeholder Image">
+    </div>
+    <div>
+        <h2>Featured Video</h2>
+        <div style="position: relative; width: 100%; padding-bottom: 56.25%;">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/5_4KRUx2iKY?si=p3Mrz4DFCvsuITqR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        
+    </div>
+</section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span id="emailError" style="color: red; display: none;">Please enter a valid email address.</span>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Raj Webpage. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('emailError');
+
+            form.addEventListener('submit', function(event) {
+                if (!isValidEmail(emailInput.value)) {
+                    event.preventDefault(); // Prevent form submission
+                    emailError.style.display = 'block'; // Show error message
+                } else {
+                    emailError.style.display = 'none'; // Hide error message if valid
+                }
+            });
+
+            function isValidEmail(email) {
+                // Basic email validation using a regular expression
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+        });
+    </script>
+</body>
+</html>
